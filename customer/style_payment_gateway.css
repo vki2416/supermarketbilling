@@ -1,0 +1,91 @@
+body {
+    background-color: #f0fff0 !important; /* Light green to confirm loading */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 25px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #3498db;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.payment-form .payment-fields {
+    display: none;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.payment-fields label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 500;
+}
+
+.payment-fields input {
+    width: 94%;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.payment-form button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.payment-form button:hover {
+    background: #3498db;
+}
+
+.processing {
+    display: none;
+    font-size: 1.2rem;
+    color: #3498db;
+    margin-top: 20px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
