@@ -1,8 +1,8 @@
 <?php
-$host = "sql205.infinityfree.com";
-$user = "if0_38650806"; // Default user in XAMPP
-$pass = "uIemY9vSdIHOrd"; // No password in XAMPP by default
-$dbname = "if0_38650806_supermarket_db";
+$host = "xxxxxxx";
+$user = "xxxxxxxxx"; // Default user in XAMPP
+$pass = "xxxxxxx"; // No password in XAMPP by default
+$dbname = "supermarket_db";
 
 // Create connection
 $conn = new mysqli($host, $user, $pass, $dbname);
