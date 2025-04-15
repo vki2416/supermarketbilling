@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Credentials</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f2ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 80, 0.2);
+      padding: 30px;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #cce0ff;
+      color: #003366;
+    }
+
+    td {
+      background-color: #f2f8ff;
+      color: #003366;
+    }
+
+    tr:hover {
+      background-color: #d9ecff;
+    }
+
+    .back-btn {
+      display: block;
+      width: 200px;
+      margin: 20px auto 0;
+      padding: 12px;
+      background-color: #004080;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #003366;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Credentials</h1>
+    <table>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Password</th>
+        <th>Role</th>
+      </tr>
+      <tr><td>5</td><td>Admin</td><td>admin@example.com</td><td>1234321</td><td>admin123</td><td>admin</td></tr>
+      <tr><td>8</td><td>New Admin</td><td>admin2@example.com</td><td>0</td><td>admin123</td><td>admin</td></tr>
+      <tr><td>1</td><td>ANJANINITHIN</td><td>ABCD@abcd</td><td>12345</td><td>123</td><td>operator</td></tr>
+      <tr><td>9</td><td>aditya</td><td>090@090</td><td>989898989</td><td>123</td><td>operator</td></tr>
+      <tr><td>12</td><td>hrishik</td><td>123@456</td><td>0</td><td>123</td><td>operator</td></tr>
+      <tr><td>14</td><td>niranjan</td><td>1@1</td><td>090009</td><td>123</td><td>operator</td></tr>
+      <tr><td>15</td><td>nikhil</td><td>123@098</td><td>9440989</td><td>123</td><td>operator</td></tr>
+    </table>
+    <a href="index.php" class="back-btn">Back to Home</a>
+  </div>
+</body>
+</html>

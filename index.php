@@ -122,7 +122,13 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     <section id="about" class="py-16 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-semibold text-gray-800 mb-6 animate__animated animate__slideInUp">Who We Are</h2>
-            <p class="text-gray-600 max-w-3xl mx-auto">Supermart brings you the best in grocery shopping with a commitment to quality and convenience.</p>
+            <p>Welcome to Supermarket  your trusted partner in modern retail billing and management.
+
+We are here to transform how supermarts operate by providing a fast, secure, and feature-rich billing system that simplifies every aspect of store management. From real-time billing and inventory tracking to profit analysis, employee management, and customer loyalty tools – Supermarket is designed to handle it all.
+
+Our mission is simple: to make supermarket operations smarter, smoother, and more efficient. Whether you run a single store or manage a chain, our platform scales with your needs and grows with your business.
+
+Built with powerful tech and a clean interface, Supermarket helps you spend less time managing and more time serving.</p>
         </div>
     </section>
 
@@ -251,31 +257,32 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     </footer>
 
     <!-- Login Modal -->
-    <div id="login-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50">
-        <div class="bg-white rounded-lg p-6 w-full max-w-md">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-semibold text-gray-800">Sign In</h3>
-                <button id="close-modal" class="text-gray-500 hover:text-gray-700"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="flex gap-4 mb-4">
-                <button class="role-select px-4 py-2 text-indigo-600 border-b-2 border-indigo-600" data-role="customer">Operator</button>
-                <button class="role-select px-4 py-2 text-gray-500" data-role="admin">Admin</button>
-            </div>
-            <form id="login-form" action="auth/login.php" method="POST" class="space-y-4">
-                <input type="hidden" name="role" id="role-input" value="customer">
-                <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" required>
-                </div>
-                <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                    <input type="password" id="password" name="password" class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" required>
-                </div>
-                <button type="submit" id="login-submit" class="w-full bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 transition">Sign In as Operator</button>
-            </form>
+<div id="login-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50">
+    <div class="bg-white rounded-lg p-6 w-full max-w-md">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-semibold text-gray-800">Sign In</h3>
+            <button id="close-modal" class="text-gray-500 hover:text-gray-700"><i class="fas fa-times"></i></button>
         </div>
+        <div class="flex gap-4 mb-4">
+            <button class="role-select px-4 py-2 text-indigo-600 border-b-2 border-indigo-600" data-role="customer">Operator</button>
+            <button class="role-select px-4 py-2 text-gray-500" data-role="admin">Admin</button>
+        </div>
+        <form id="login-form" action="auth/login.php" method="POST" class="space-y-4">
+            <input type="hidden" name="role" id="role-input" value="customer">
+            <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" required>
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="w-full p-2 border rounded-lg focus:ring-2 focus:ring-indigo-500" required>
+            </div>
+            <button type="submit" id="login-submit" class="w-full bg-indigo-600 text-white p-2 rounded-lg hover:bg-indigo-700 transition">Sign In as Operator</button>
+            <a href="check.html" class="block w-full bg-gray-200 text-gray-800 p-2 rounded-lg hover:bg-gray-300 text-center transition">View Credentials</a>
+        </form>
     </div>
+</div>
 
     <!-- JavaScript -->
     <script>
