@@ -7,87 +7,120 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermart - Dummy Page</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style_index.css">
+    <title>Supermart - Coming Soon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        .dummy-container {
-            min-height: 80vh;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a, #22d3ee);
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #F8F9FA, #EDEEF0);
-            animation: fadeIn 1.5s ease-in-out;
-            padding: 2rem;
+            justify-content: center;
+            margin: 0;
         }
 
-        .dummy-content {
-            text-align: center;
-            background: #FFFFFF;
+        .coming-soon-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
             padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-            animation: bounceIn 1s ease-out;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .dummy-content h1 {
-            font-size: 3rem;
-            color: #FF5733;
-            margin-bottom: 1rem;
-            animation: slideInDown 1s ease-out;
+        .coming-soon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3), transparent 70%);
+            opacity: 0.5;
+            z-index: 0;
         }
 
-        .dummy-content p {
-            font-size: 1.2rem;
-            color: #666666;
-            animation: slideInUp 1s ease-out;
+        .coming-soon-card > * {
+            position: relative;
+            z-index: 1;
         }
 
-        .dummy-icon {
+        .coming-soon-icon {
             font-size: 5rem;
-            color: #FF5733;
+            color: #4f46e5;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        .coming-soon-card h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
             margin-bottom: 1rem;
-            animation: rotateIn 1s ease-out;
         }
 
-        @keyframes rotateIn {
-            0% { transform: rotate(-20deg); opacity: 0; }
-            100% { transform: rotate(0); opacity: 1; }
+        .coming-soon-card p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
         }
 
-        @media (max-width: 768px) {
-            .dummy-content {
+        .back-home-btn {
+            background: #4f46e5;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+        }
+
+        .back-home-btn:hover {
+            background: #4338ca;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+        }
+
+        @media (max-width: 640px) {
+            .coming-soon-card {
                 padding: 2rem;
             }
-            .dummy-content h1 {
-                font-size: 2rem;
+            .coming-soon-card h1 {
+                font-size: 1.875rem;
             }
-            .dummy-content p {
+            .coming-soon-card p {
                 font-size: 1rem;
             }
-            .dummy-icon {
-                font-size: 3rem;
+            .coming-soon-icon {
+                font-size: 3.5rem;
             }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
         }
     </style>
 </head>
 <body>
-    <div class="dummy-container">
-        <div class="dummy-content">
-            <i class="bi bi-bag-check dummy-icon"></i>
-            <h1>Coming Soon!</h1>
-            <p>This page is under development. Stay tuned for exciting updates on our services, app downloads, or search features!</p>
-            <a href="index.php" class="btn btn-get-app mt-4">Back to Home</a>
-        </div>
+    <div class="coming-soon-card animate__animated animate__fadeIn">
+        <i class="fas fa-shopping-bag coming-soon-icon"></i>
+        <h1>Coming Soon!</h1>
+        <p>Our app is under development. Stay tuned for exciting updates on how to shop smarter with Supermart!</p>
+        <a href="index.php" class="back-home-btn">Back to Home</a>
     </div>
-
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
