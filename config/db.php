@@ -1,7 +1,7 @@
 <?php
-$host = "xxxxxxx";
-$user = "xxxxxxxxx"; // Default user in XAMPP
-$pass = "xxxxxxx"; // No password in XAMPP by default
+$host = "xxxxxxx";//Redacted
+$user = "xxxxxxxxx"; // Redacted
+$pass = "xxxxxxx"; // Redacted
 $dbname = "supermarket_db";
 
 // Create connection
